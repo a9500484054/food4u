@@ -1,0 +1,142 @@
+.food4u-section {
+    padding: 10px;
+    padding-top: 40px;
+
+    &__wrapp {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 300px;
+        margin: auto;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        font-size: $font-size--l;
+        font-weight: 800;
+    }
+}
+
+.food4u-list-section {
+    display: flex;
+    flex-direction: column;
+    &__item {
+        margin-bottom: 20px;
+    }
+}
+
+
+.food4u-recipe {
+    display: flex;
+    flex-direction: column;
+    
+    &__title {
+        margin-bottom: 15px;
+        max-width: 300px;
+        font-size: $font-size--l - 4;
+        font-weight: 500;
+        color: $color-text--black;
+        
+        order:2;
+    }
+    &__img {
+        width: 100%;
+        min-width: 300px;
+        max-width: 380px;
+        margin-bottom: 17px;
+
+        border-radius: 10px;
+
+        order:1;
+    }
+    &__list {
+        display: flex;
+
+        order:3;
+    }
+    &__ltem {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+
+        font-size: $font-size--xs;
+        color: $color-icon-grey
+    }
+    &__i {
+        margin-right: 9px;
+        font-size: $font-size--xs + 4;
+    }
+}
+
+@media (min-width: $screen-table) {
+    .food4u-section {
+        padding: 20px;
+
+        &__wrapp {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            
+            max-width: 820px;
+        }
+    }
+    .food4u-list-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &__item:nth-child(odd) {
+            margin-right: 20px;
+        }
+    }
+
+    .food4u-recipe {
+        &__title--width {
+            max-width: 200px;
+        }
+    }
+}
+
+@media (min-width: $screen-desktop) {
+    .food4u-section {
+        padding: 110px;
+        padding-top: 100px;
+        padding-bottom: 142px;
+    
+        &__wrapp {
+            max-width: 1700px;
+        }
+    
+        &__title {
+            margin-bottom: 43px;
+    
+            font-size: $font-size--xl - 10;
+            font-weight: 800;
+        }
+    }
+    .food4u-list-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        &__item {
+            margin-right: 60px;
+        }
+        &__item:nth-child(odd) {
+            margin-right: 60px;
+        }
+    }
+
+    .food4u-recipe {
+        &__img {
+            width: 100%;
+            min-width: 250px;
+        }
+        &__title {
+            font-size: $font-size--l;
+        }
+        &__title--width-350 {
+            max-width: 350px;
+        }
+        
+    }
+}

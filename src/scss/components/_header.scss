@@ -1,0 +1,223 @@
+.food4u-header {
+    position: absolute;
+    display: flex;
+    min-width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 10px;
+
+    z-index: 999;
+
+    &__food4u-logo {
+        order: 2;
+    }
+    &__food4u-menu {
+        display: none;
+    }
+    &__food4u-link {
+        order: 3;
+    }
+    &__food4u-burger {
+        order:1;
+    }
+}
+
+.food4u-logo {
+    width: 100px;
+}
+
+.food4u-menu {
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: $color-text--black;
+    padding: 50px;
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+    &__item {
+        margin-right: 20px;
+        margin-bottom: 40px;
+    }
+    &__link {
+        font-size: $font-size--s;
+        font-weight: 600;
+        color: $color-text--white;
+        &:hover,
+        &:focus {
+            color: $color-bg--yellow;
+        }
+        &:active {
+            color: $color-text--white;
+        }
+    }
+}
+
+.food4u-link {
+    padding: 10px 15px;
+
+    font-size: $font-size--xs - 4;
+    color: $color-text--black;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    background-color: $color-bg--yellow;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.35);
+    border-radius: 40px;
+}
+
+.food4u-burger {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    &__elem-btn {
+        width: 100%;
+        height: 2px;
+        background: $color-bg--grey;
+
+        position: relative;
+		height: 2px;
+        &::after,
+		&::before {
+			content: "";
+
+			position: absolute;
+			left: 0;
+			height: 2px;
+	
+			background-color: $color-bg--grey;
+		}
+		&::after{
+			top:7px;
+			width: 20px;
+		}
+		&::before{
+			top:-7px;
+			width: 18px;
+		}
+    }
+    &__elem-btn--close { 
+        transform: rotate(45deg);
+        &::after{
+			top:1px;
+			width: 30px;
+            transform: rotate(-90deg);
+		}
+		&::before{
+			width: 0;
+		}
+    }
+
+}
+
+
+@media (min-width: $screen-table) {
+    .food4u-header {
+        padding: 20px 20px;
+        &__food4u-logo {
+            order: 1;
+            margin-right: auto;
+        }
+        &__food4u-menu {
+            display: flex;
+            order: 2;
+        }
+        &__food4u-link {
+            order: 3;
+        }
+        &__food4u-burger {
+            display: none;
+        } 
+        
+        
+    }
+
+    .food4u-menu {
+        position: static;
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: auto;
+        padding: 0;
+        background-color: transparent;
+        &__list {
+            display: flex;
+            flex-direction: row;
+            
+        }
+        &__item {
+            margin-right: 20px;
+            margin-bottom: 0;
+        }
+        &__link {
+            font-size: $font-size--s;
+            font-weight: 600;
+            color: $color-text--white;
+            &:hover,
+            &:focus {
+                color: $color-bg--yellow;
+            }
+            &:active {
+                color: $color-text--white;
+            }
+        }
+    }
+    
+
+    .food4u-logo {
+        width: 156px;
+    }
+
+    .food4u-link {
+        font-size: $font-size--xs;
+        padding: 15px 44px;
+    }
+
+}
+
+@media (min-width: $screen-desktop) {
+    .food4u-header {
+        padding: 50px;
+        padding-left: 60px;        
+        padding-right: 82px;        
+        &__food4u-logo {
+            order: 1;
+            margin-right: auto;
+        }
+        &__food4u-menu {
+            display: flex;
+            order: 2;
+        }
+        &__food4u-link {
+            order: 3;
+        }
+        &__food4u-burger {
+            display: none;
+        } 
+    
+    }
+
+    .food4u-menu {
+        &__item {
+            margin-right: 66px;
+        }
+        &__item:last-child {
+            margin-right: 100px;
+        }
+    }
+
+    .food4u-logo {
+        width: 256px;
+    }
+
+    .food4u-link {
+        font-size: $font-size--xs;
+        padding: 30px 44px;
+    }
+}

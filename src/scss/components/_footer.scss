@@ -1,0 +1,196 @@
+.food4u-footer {
+    background-color: $color-bg--grey;
+    padding: 10px;
+
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+}
+
+.fblock-one {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    margin-bottom: 20px;
+    &__logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        max-width: 575px;
+        font-size: $font-size--m;
+        color: $color-text--grey;
+        line-height: 150%;
+        margin-bottom: 8px;
+    }
+
+}
+.fblock-two {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    &__title {
+        font-size: $font-size--l;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        margin-bottom: 15px;
+    }
+
+    &__link {
+        font-size: $font-size--m;
+        color: $color-text--grey;
+        font-weight: 400;
+    }
+
+}
+
+
+
+.fblock-three {
+    
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    margin-bottom: 40px;
+    &__title {
+        font-size: $font-size--l;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+    }
+
+    &__item {
+        margin-bottom: 15px;
+    }
+
+    &__link {
+        font-size: $font-size--m;
+        color: $color-text--grey;
+        font-weight: 400;
+    }
+}
+.fblock-four {
+    border-top: 1px solid $color-text--grey;
+    padding-top: 40px;
+    &__wrap {
+        margin-bottom: 20px;
+        
+    }
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__list {
+        display: flex;
+
+    }
+    &__item {
+        margin-right: 40px;
+    }
+
+    &__link {
+        font-size: 40px;
+        color: $color-icon-grey;
+        &:hover,
+        &:focus {
+            color: $color-bg--yellow;
+        }
+        &:active {
+            color: $color-icon-grey;
+        }
+
+    }
+    &__elem {
+        font-size: $font-size--xl - 20;
+        color: $color-text--black;
+        font-weight: 800;
+    }
+    &__elem {
+        margin-right: 30px;
+    }
+}
+
+@media (min-width: $screen-table) {
+    .food4u-footer {
+        background-color: $color-bg--grey;
+        padding: 20px;
+    }
+    
+}
+
+@media (min-width: $screen-desktop) {
+    .food4u-footer {
+        background-color: $color-bg--grey;
+        padding-left: 60px;
+        padding-right: 159px;
+        padding-top: 141px;
+        padding-bottom: 93px;
+    
+        &__wrap {
+            max-width: 1650px;
+            display: flex;
+            flex-wrap: nowrap;
+            margin-bottom: 59px;
+            
+        }
+        &__fblock-one {
+            flex-basis: auto;
+            margin-right: auto;
+        }
+
+        &__fblock-two {
+            flex-basis: auto;
+            margin-right: 228px;
+        }
+
+        &__fblock-three {
+            flex-basis: auto;
+        }
+    }
+    .fblock-one {
+        &__logo {
+            margin-top: 10px;
+        }
+    }
+    .fblock-two {
+        &__title {
+            margin-bottom: 44px;
+        }
+        &__item {
+            margin-bottom: 30px;
+        }
+    }
+    .fblock-three {
+        &__title {
+            margin-bottom: 44px;
+        }
+        &__item {
+            margin-bottom: 30px;
+        }
+    }
+    
+    .fblock-four {
+        display: flex;
+        align-items: center;
+        padding-top: 70px;
+        &__wrap {
+            margin-right: auto;
+        }
+        &__elem {
+            margin-right: 83px;
+        }
+        &__elem:last-child {
+            margin-right: 0
+        }
+    }
+
+}

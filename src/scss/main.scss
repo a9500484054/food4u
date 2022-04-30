@@ -1,0 +1,14 @@
+@import "fonts";
+@import "libraries";
+@import "variables";
+@import "mixins";
+@import "base";
+
+@import "./components/header";
+@import "./components/food4u-main";
+@import "./components/food4u-section";
+@import "./components/footer";
+
+.on {
+    display: flex;
+}
